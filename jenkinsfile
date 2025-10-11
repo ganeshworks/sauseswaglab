@@ -1,0 +1,60 @@
+pipeline {
+    agent any
+	
+    environment {
+        PATH = "$PATH:/usr/local/bin"
+    }
+	
+    triggers {
+        cron('40 22 * * *')   // scheduled build daily at 10:40 PM
+    }
+
+    tools {
+        maven 'Apache Maven 3.8.7'   // must match Jenkins Maven tool name
+    }
+
+    stages {
+        stage('Checkout Code') {
+            steps {
+                git branch: 'main',
+                    url: 'https://github.com/ganeshworks/sauseswaglab.git'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                sh 'mvn clean compile'
+            }
+        }
+
+        stage('Run Tests') {
+            steps {
+                sh '''
+                    pkill -f chrome || true
+                    pkill -f chromedriver || true
+                    pkill -f firefox || true
+                    pkill -f geckodriver || true
+                '''
+                sh 'mvn test'
+            }
+        }
+
+        stage('Publish Test Results') {
+            steps {
+                junit 'target/surefire-reports/*.xml'
+            }
+        }
+    }
+
+    post {
+        always {
+            cleanWs()
+        }
+        success {
+            echo "✅ Build and tests passed!"
+        }
+        failure {
+            echo "❌ Build or tests failed!"
+        }
+    }
+}
