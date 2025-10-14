@@ -2,16 +2,16 @@
 <testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-14T22:06:15 IST" name="automation suite" finished-at="2025-10-14T22:06:16 IST" duration-ms="1162">
+  <suite started-at="2025-10-14T23:29:52 IST" name="automation suite" finished-at="2025-10-14T23:29:54 IST" duration-ms="1415">
     <groups>
     </groups>
-    <test started-at="2025-10-14T22:06:15 IST" name="logintest" finished-at="2025-10-14T22:06:16 IST" duration-ms="1162">
+    <test started-at="2025-10-14T23:29:52 IST" name="logintest" finished-at="2025-10-14T23:29:54 IST" duration-ms="1415">
       <class name="testClasses.LoginTestUI">
-        <test-method is-config="true" signature="beforesuite()[pri:0, instance:testClasses.LoginTestUI@62379589]" started-at="2025-10-14T22:06:14 IST" name="beforesuite" finished-at="2025-10-14T22:06:15 IST" duration-ms="958" status="PASS">
+        <test-method is-config="true" signature="beforesuite()[pri:0, instance:testClasses.LoginTestUI@43bc63a3]" started-at="2025-10-14T23:29:51 IST" name="beforesuite" finished-at="2025-10-14T23:29:52 IST" duration-ms="987" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforesuite -->
-        <test-method signature="loginUItest1(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginTestUI@62379589]" started-at="2025-10-14T22:06:15 IST" name="loginUItest1" data-provider="logindata" finished-at="2025-10-14T22:06:15 IST" duration-ms="848" status="PASS">
+        <test-method signature="loginUItest1(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginTestUI@43bc63a3]" started-at="2025-10-14T23:29:52 IST" name="loginUItest1" data-provider="logindata" finished-at="2025-10-14T23:29:54 IST" duration-ms="1159" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -27,7 +27,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginUItest1 -->
-        <test-method signature="loginUItest1(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginTestUI@62379589]" started-at="2025-10-14T22:06:15 IST" name="loginUItest1" data-provider="logindata" finished-at="2025-10-14T22:06:16 IST" duration-ms="290" status="PASS">
+        <test-method signature="loginUItest1(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginTestUI@43bc63a3]" started-at="2025-10-14T23:29:54 IST" name="loginUItest1" data-provider="logindata" finished-at="2025-10-14T23:29:54 IST" duration-ms="234" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -43,6 +43,10 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginUItest1 -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testClasses.LoginTestUI@43bc63a3]" started-at="2025-10-14T23:29:54 IST" name="tearDown" finished-at="2025-10-14T23:29:54 IST" duration-ms="147" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- testClasses.LoginTestUI -->
     </test> <!-- logintest -->
   </suite> <!-- automation suite -->

@@ -10,6 +10,9 @@ import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
+import com.aventstack.extentreports.ExtentTest;
+import com.aventstack.extentreports.Status;
+
 import testUtility.BaseClass;
 import test_pages.*;
 import testobjects.LoginElementUI;
@@ -129,13 +132,15 @@ public class LoginTestUI extends BaseClass {
 
 	@Test(dataProvider = "logindata")
 	public void loginUItest1(String username, String password) {
+		test=extent.createTest("login test for username"+username);
 		ReadConfig1 read = new ReadConfig1();
 		LoginElementUI l = new LoginElementUI(driver);
 		driver.get(read.url());
+		test.log(Status.INFO, "navigated to url"+read.url());
 		Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/", "Invalid launch URL");
-
+		test.log(Status.INFO, "Verified URL successfully launched.");
 		Assert.assertTrue(l.getusername().isEnabled(), "Username field not enabled");
-
+		test.log(Status.INFO, "username field is enabled");
 		String pagesource = l.attemptlogin(username, password);
 
 		if (password.equals("secret_sauc")) {

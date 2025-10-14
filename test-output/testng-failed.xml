@@ -5,8 +5,9 @@
     <classes>
       <class name="testClasses.LoginTestUI">
         <methods>
-          <include name="loginUItest1" invocation-numbers="1"/>
+          <include name="loginUItest1"/>
           <include name="beforesuite"/>
+          <include name="tearDown"/>
         </methods>
       </class> <!-- testClasses.LoginTestUI -->
     </classes>
