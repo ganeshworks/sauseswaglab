@@ -6,17 +6,19 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.testng.Assert;
+import org.testng.annotations.DataProvider;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 import testUtility.BaseClass;
-import test_pages.ReadConfig;
+import test_pages.*;
 import testobjects.LoginElementUI;
 
 public class LoginTestUI extends BaseClass {
 
 	@Test(enabled = false)
 	public void logintest() {
+
 		ReadConfig read = new ReadConfig();
 		LoginElementUI l = new LoginElementUI(driver);
 		driver.get(read.url());
@@ -80,7 +82,7 @@ public class LoginTestUI extends BaseClass {
 		}
 	}
 
-	@Test
+	@Test(enabled = false)
 
 	public void loginuitest() {
 		ReadConfig read = new ReadConfig();
@@ -92,32 +94,59 @@ public class LoginTestUI extends BaseClass {
 		Assert.assertEquals(actualurl, "https://www.saucedemo.com/", "Launch Was Not on valid Url");
 
 		// verify userid and password fields available
-		if (l.getusername().isEnabled()) {
-			// System.out.println(l.getframedata());
-			for (int i = 0; i < l.getuserframedata().size(); i++) {
-				System.out.println("usernames data" + l.getuserframedata().get(i));
-				String usernames = l.getuserframedata().get(i);
+		/*
+		 * if (l.getusername().isEnabled()) { // System.out.println(l.getframedata());
+		 * for (int i = 0; i < l.getuserframedata().size(); i++) {
+		 * System.out.println("usernames data" + l.getuserframedata().get(i)); String
+		 * usernames = l.getuserframedata().get(i);
+		 * 
+		 * if (usernames.contains("standard_user")) { l.username("standard_user"); if
+		 * (l.getpassword().isDisplayed() &&
+		 * l.getpasswordFrameData().get(i).contains("secret_sauce")) {
+		 * l.password("secret_sauc"); if (l.getsubmitbtn().isDisplayed() &&
+		 * l.getsubmitbtn().isEnabled()) { l.submitbutton();
+		 * //System.out.println(driver.getPageSource()); String pagesource =
+		 * driver.getPageSource(); if(pagesource.
+		 * contains("Epic sadface: Username and password do not match any user in this service"
+		 * )) { Assert.assertTrue(true , "confdition failed");
+		 * System.out.println("error message validation passed"); }
+		 * 
+		 * }
+		 * 
+		 * } } }
+		 * 
+		 * }
+		 */
+		Assert.assertTrue(l.getusername().isEnabled(), "Username field not enabled");
 
-				if (usernames.contains("standard_user")) {
-					l.username("standard_user");
-					if (l.getpassword().isDisplayed() && l.getpasswordFrameData().get(i).contains("secret_sauce")) {
-						l.password("secret_sauc");
-						if (l.getsubmitbtn().isDisplayed() && l.getsubmitbtn().isEnabled()) {
-							l.submitbutton();
-							//System.out.println(driver.getPageSource());
-							String pagesource = driver.getPageSource();
-							if(pagesource.contains("Epic sadface: Username and password do not match any user in this service")) {
-								Assert.assertTrue(true , "confdition failed");
-								System.out.println("error message validation passed");
-							}
-							
-						}
+		String pagesource = l.attemptlogin("standard_user", "standard_us");
+	}
 
-					}
-				}
-			}
+	@DataProvider(name = "logindata")
+	public Object[][] logindata() {
+		return new Object[][] { { "standard_user", "secret_sauc" }, { "standard_user", "secret_sauce" } };
+	}
+
+	@Test(dataProvider = "logindata")
+	public void loginUItest1(String username, String password) {
+		ReadConfig1 read = new ReadConfig1();
+		LoginElementUI l = new LoginElementUI(driver);
+		driver.get(read.url());
+		Assert.assertEquals(driver.getCurrentUrl(), "https://www.saucedemo.com/", "Invalid launch URL");
+
+		Assert.assertTrue(l.getusername().isEnabled(), "Username field not enabled");
+
+		String pagesource = l.attemptlogin(username, password);
+
+		if (password.equals("secret_sauc")) {
+			Assert.assertTrue(pagesource.contains(
+					"Epic sadface: Username and password do not match any user in this service"));
+			System.out.println("❌ Validation passed: Incorrect password message displayed");
+		} else {
+			Assert.assertTrue(
+					pagesource.contains("inventory.html") || driver.getCurrentUrl().contains("inventory.html"),
+					"User did not navigate to inventory page after login");
 
 		}
 	}
-
 }

@@ -7,6 +7,8 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+import test_pages.ReadConfig1;
+
 public class LoginElementUI {
 	WebDriver driver;
 
@@ -60,6 +62,14 @@ public class LoginElementUI {
 		}
 		return passlist;
 	}
+	public String attemptlogin(String username , String password) {
+		username(username);
+		password(password);
+		submitbutton();
+		return driver.getPageSource();
+		
+	}
+	
 	
 
 	

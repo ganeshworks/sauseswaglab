@@ -5,7 +5,7 @@
     <classes>
       <class name="testClasses.LoginTestUI">
         <methods>
-          <include name="logintest"/>
+          <include name="loginUItest1" invocation-numbers="0 1"/>
           <include name="beforesuite"/>
         </methods>
       </class> <!-- testClasses.LoginTestUI -->

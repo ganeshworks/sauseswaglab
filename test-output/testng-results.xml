@@ -1,20 +1,48 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="1" passed="1" failed="0" skipped="0">
+<testng-results ignored="0" total="2" passed="2" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-11T13:38:30 IST" name="automation suite" finished-at="2025-10-11T13:38:31 IST" duration-ms="1207">
+  <suite started-at="2025-10-14T22:06:15 IST" name="automation suite" finished-at="2025-10-14T22:06:16 IST" duration-ms="1162">
     <groups>
     </groups>
-    <test started-at="2025-10-11T13:38:30 IST" name="logintest" finished-at="2025-10-11T13:38:31 IST" duration-ms="1207">
+    <test started-at="2025-10-14T22:06:15 IST" name="logintest" finished-at="2025-10-14T22:06:16 IST" duration-ms="1162">
       <class name="testClasses.LoginTestUI">
-        <test-method is-config="true" signature="beforesuite()[pri:0, instance:testClasses.LoginTestUI@702657cc]" started-at="2025-10-11T13:38:29 IST" name="beforesuite" finished-at="2025-10-11T13:38:30 IST" duration-ms="893" status="PASS">
+        <test-method is-config="true" signature="beforesuite()[pri:0, instance:testClasses.LoginTestUI@62379589]" started-at="2025-10-14T22:06:14 IST" name="beforesuite" finished-at="2025-10-14T22:06:15 IST" duration-ms="958" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforesuite -->
-        <test-method signature="loginuitest()[pri:0, instance:testClasses.LoginTestUI@702657cc]" started-at="2025-10-11T13:38:30 IST" name="loginuitest" finished-at="2025-10-11T13:38:31 IST" duration-ms="1187" status="PASS">
+        <test-method signature="loginUItest1(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginTestUI@62379589]" started-at="2025-10-14T22:06:15 IST" name="loginUItest1" data-provider="logindata" finished-at="2025-10-14T22:06:15 IST" duration-ms="848" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[standard_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauc]]>
+              </value>
+            </param>
+          </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- loginuitest -->
+        </test-method> <!-- loginUItest1 -->
+        <test-method signature="loginUItest1(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginTestUI@62379589]" started-at="2025-10-14T22:06:15 IST" name="loginUItest1" data-provider="logindata" finished-at="2025-10-14T22:06:16 IST" duration-ms="290" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[standard_user]]>
+              </value>
+            </param>
+            <param index="1">
+              <value>
+                <![CDATA[secret_sauce]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginUItest1 -->
       </class> <!-- testClasses.LoginTestUI -->
     </test> <!-- logintest -->
   </suite> <!-- automation suite -->
