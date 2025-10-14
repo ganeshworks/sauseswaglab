@@ -48,7 +48,9 @@ pipeline {
 
     post {
         always {
-            cleanWs()
+             echo "Archiving test reports..."
+        archiveArtifacts artifacts: 'reports/*.html', fingerprint: true
+        cleanWs()
         }
         success {
             echo "✅ Build and tests passed!"
