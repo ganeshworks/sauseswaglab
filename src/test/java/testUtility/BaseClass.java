@@ -49,7 +49,7 @@ public class BaseClass {
 		options.addArguments("--no-sandbox");
 		options.addArguments("--disable-dev-shm-usage");
 		options.addArguments("--disable-gpu");
-		//options.addArguments("--headless=new"); // run headless on Jenkins Linux
+		options.addArguments("--headless=new"); // run headless on Jenkins Linux
 		options.addArguments("--remote-allow-origins=*");
 
 		// 👇 unique directory for each run
