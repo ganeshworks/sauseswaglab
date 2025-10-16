@@ -1,4 +1,4 @@
-package swag.labs;
+package swag_labs;
 
 /**
  * Hello world!

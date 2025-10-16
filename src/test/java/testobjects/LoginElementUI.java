@@ -69,6 +69,12 @@ public class LoginElementUI {
 		return driver.getPageSource();
 		
 	}
+	public String gethomeurl() {
+		return driver.getCurrentUrl();
+	}
+	public String gettittle() {
+		return driver.getTitle();
+	}
 	
 	
 

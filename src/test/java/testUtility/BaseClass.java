@@ -4,12 +4,12 @@ import java.io.File;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
-import org.junit.runners.Parameterized.Parameters;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
 
 import com.aventstack.extentreports.ExtentReporter;
 import com.aventstack.extentreports.ExtentReports;
@@ -39,7 +39,7 @@ public class BaseClass {
 	 * 
 	 * driver.manage().window().maximize();
 	 */
-	//@Parameters("env") 
+	@Parameters("env") 
 	@BeforeSuite(alwaysRun = true)
 	public void beforesuite() {
 		WebDriverManager.chromedriver().setup();
@@ -71,7 +71,7 @@ public class BaseClass {
 		 */
 		
 		String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
-        String reportName = "Test-Report-" + timestamp + ".html";
+        String reportName = "Automation_Report-" + timestamp + ".html";
 
         // Create reports folder if not exists
         String reportPath = System.getProperty("user.dir") + "/reports/" + reportName;

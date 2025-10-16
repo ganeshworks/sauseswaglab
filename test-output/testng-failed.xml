@@ -3,13 +3,13 @@
 <suite name="Failed suite [automation suite]" guice-stage="DEVELOPMENT">
   <test thread-count="5" name="logintest(failed)">
     <classes>
-      <class name="testClasses.LoginTestUI">
+      <class name="testClasses.HomePageTestUI">
         <methods>
-          <include name="loginUItest1"/>
+          <include name="HomeScreen"/>
           <include name="beforesuite"/>
           <include name="tearDown"/>
         </methods>
-      </class> <!-- testClasses.LoginTestUI -->
+      </class> <!-- testClasses.HomePageTestUI -->
     </classes>
   </test> <!-- logintest(failed) -->
 </suite> <!-- Failed suite [automation suite] -->
