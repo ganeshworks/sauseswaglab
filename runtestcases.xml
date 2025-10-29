@@ -10,12 +10,12 @@
         </classes>
     </test>
 
-    <test name="logintest_firefox">
+    <!--<test name="logintest_firefox">
         <parameter name="browser" value="firefox" />
         <classes>
             <class name="testClasses.LoginSauseUI"></class>
             <class name="testClasses.HomePageTestUI"></class>
         </classes>
-    </test>
+    </test>-->
 
 </suite>

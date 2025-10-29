@@ -41,8 +41,10 @@ public class LoginSauseUI extends BaseClass {
 		test.log(Status.PASS, "username field is enabled and accepting data");
 		Assert.assertTrue(l.getpassword().isEnabled(), "password field is not enabled");
 		test.log(Status.PASS, "Password Field Enabled And Accepting Data");
+		Thread.sleep(1000);
 		String pagesource = l.attemptlogin(username, password);
 		test.log(Status.PASS, "Login With test data :  " + " ,,, " + username + "  ,," + password);
+		Thread.sleep(3000);
 		// Assert.assertEquals(l.gethomeurl(),
 		// "https://www.saucedemo.com/inventory.html","login url was not matched");
 

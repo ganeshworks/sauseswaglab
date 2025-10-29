@@ -1,11 +1,15 @@
 package testobjects;
 
+import java.time.Duration;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.ExpectedConditions;
+import org.openqa.selenium.support.ui.WebDriverWait;
 
 import test_pages.ReadConfig1;
 
@@ -22,8 +26,14 @@ public class LoginElementUI {
 
 	// actions
 	public void username(String str) {
-		driver.findElement(userid).sendKeys(str);
+		/*
+		 * WebDriverWait wait = new WebDriverWait(driver, Duration.ofSeconds(25));
+		 * wait.until(ExpectedConditions.visibilityOfElementLocated(userid));
+		 */
+		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
+	    driver.findElement(userid).sendKeys(str);
 	}
+
 
 	public void password(String str) {
 		driver.findElement(pass).sendKeys(str);

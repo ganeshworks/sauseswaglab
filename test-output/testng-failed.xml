@@ -7,32 +7,11 @@
       <class name="testClasses.LoginSauseUI">
         <methods>
           <include name="failedscreenshot"/>
-          <include name="logintest" invocation-numbers="8 10 11"/>
-          <include name="beforesuite"/>
+          <include name="beforetest"/>
+          <include name="logintest" invocation-numbers="11"/>
           <include name="tearDown"/>
         </methods>
       </class> <!-- testClasses.LoginSauseUI -->
-      <class name="testClasses.HomePageTestUI">
-        <methods>
-          <include name="HomeScreen"/>
-          <include name="failedscreenshot"/>
-          <include name="beforesuite"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- testClasses.HomePageTestUI -->
     </classes>
   </test> <!-- logintest_firefox(failed) -->
-  <test thread-count="2" parallel="tests" name="logintest_chrome(failed)">
-    <parameter name="browser" value="chrome"/>
-    <classes>
-      <class name="testClasses.LoginSauseUI">
-        <methods>
-          <include name="failedscreenshot"/>
-          <include name="logintest" invocation-numbers="8"/>
-          <include name="beforesuite"/>
-          <include name="tearDown"/>
-        </methods>
-      </class> <!-- testClasses.LoginSauseUI -->
-    </classes>
-  </test> <!-- logintest_chrome(failed) -->
 </suite> <!-- Failed suite [automation suite] -->

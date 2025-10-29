@@ -17,7 +17,6 @@ import org.testng.ITestResult;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.AfterTest;
-import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
@@ -53,7 +52,7 @@ public class BaseClass {
 
 	@BeforeTest(alwaysRun = true)
 	@Parameters("browser")
-	public void beforesuite(String browser) {
+	public void beforetest(String browser) {
 		if (browser.equalsIgnoreCase("chrome")) {
 			WebDriverManager.chromedriver().setup();
 			ChromeOptions options = new ChromeOptions();

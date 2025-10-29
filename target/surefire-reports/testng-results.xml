@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="26" passed="26" failed="0" skipped="0">
+<testng-results ignored="0" total="12" passed="12" failed="0" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2025-10-29T16:31:04 IST" name="automation suite" finished-at="2025-10-29T16:31:39 IST" duration-ms="34180">
+  <suite started-at="2025-10-29T17:54:25 IST" name="automation suite" finished-at="2025-10-29T17:55:38 IST" duration-ms="73834">
     <groups>
     </groups>
-    <test started-at="2025-10-29T16:31:04 IST" name="logintest_chrome" finished-at="2025-10-29T16:31:10 IST" duration-ms="5976">
+    <test started-at="2025-10-29T17:54:25 IST" name="logintest_chrome" finished-at="2025-10-29T17:55:38 IST" duration-ms="73834">
       <class name="testClasses.LoginSauseUI">
-        <test-method is-config="true" signature="beforesuite(java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1]" started-at="2025-10-29T16:31:04 IST" name="beforesuite" finished-at="2025-10-29T16:31:05 IST" duration-ms="791" status="PASS">
+        <test-method is-config="true" signature="beforetest(java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1]" started-at="2025-10-29T17:54:25 IST" name="beforetest" finished-at="2025-10-29T17:54:25 IST" duration-ms="821" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -17,35 +17,8 @@
           </params>
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- beforesuite -->
-        <test-method signature="logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1]" started-at="2025-10-29T16:31:06 IST" name="logintest" data-provider="logindata" finished-at="2025-10-29T16:31:06 IST" duration-ms="645" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[standard_user]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[secret_sauce]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logintest -->
-        <test-method is-config="true" signature="failedscreenshot(org.testng.ITestResult)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1]" started-at="2025-10-29T16:31:06 IST" name="failedscreenshot" finished-at="2025-10-29T16:31:06 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=logintest status=SUCCESS method=LoginSauseUI.logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- failedscreenshot -->
-        <test-method signature="logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1]" started-at="2025-10-29T16:31:06 IST" name="logintest" data-provider="logindata" finished-at="2025-10-29T16:31:07 IST" duration-ms="284" status="PASS">
+        </test-method> <!-- beforetest -->
+        <test-method signature="logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1]" started-at="2025-10-29T17:54:26 IST" name="logintest" data-provider="logindata" finished-at="2025-10-29T17:54:30 IST" duration-ms="4616" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -61,7 +34,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logintest -->
-        <test-method is-config="true" signature="failedscreenshot(org.testng.ITestResult)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1]" started-at="2025-10-29T16:31:07 IST" name="failedscreenshot" finished-at="2025-10-29T16:31:07 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="failedscreenshot(org.testng.ITestResult)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1]" started-at="2025-10-29T17:54:30 IST" name="failedscreenshot" finished-at="2025-10-29T17:54:30 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -72,7 +45,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- failedscreenshot -->
-        <test-method signature="logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1]" started-at="2025-10-29T16:31:07 IST" name="logintest" data-provider="logindata" finished-at="2025-10-29T16:31:07 IST" duration-ms="608" status="PASS">
+        <test-method signature="logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1]" started-at="2025-10-29T17:54:30 IST" name="logintest" data-provider="logindata" finished-at="2025-10-29T17:54:35 IST" duration-ms="4208" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -88,7 +61,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logintest -->
-        <test-method is-config="true" signature="failedscreenshot(org.testng.ITestResult)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1]" started-at="2025-10-29T16:31:07 IST" name="failedscreenshot" finished-at="2025-10-29T16:31:07 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="failedscreenshot(org.testng.ITestResult)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1]" started-at="2025-10-29T17:54:35 IST" name="failedscreenshot" finished-at="2025-10-29T17:54:35 IST" duration-ms="1" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -99,7 +72,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- failedscreenshot -->
-        <test-method signature="logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1]" started-at="2025-10-29T16:31:07 IST" name="logintest" data-provider="logindata" finished-at="2025-10-29T16:31:08 IST" duration-ms="287" status="PASS">
+        <test-method signature="logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1]" started-at="2025-10-29T17:54:35 IST" name="logintest" data-provider="logindata" finished-at="2025-10-29T17:54:39 IST" duration-ms="4197" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -115,7 +88,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logintest -->
-        <test-method signature="logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1]" started-at="2025-10-29T16:31:08 IST" name="logintest" data-provider="logindata" finished-at="2025-10-29T16:31:08 IST" duration-ms="357" status="PASS">
+        <test-method signature="logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1]" started-at="2025-10-29T17:54:39 IST" name="logintest" data-provider="logindata" finished-at="2025-10-29T17:54:43 IST" duration-ms="4183" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -131,7 +104,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logintest -->
-        <test-method is-config="true" signature="failedscreenshot(org.testng.ITestResult)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1]" started-at="2025-10-29T16:31:08 IST" name="failedscreenshot" finished-at="2025-10-29T16:31:08 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="failedscreenshot(org.testng.ITestResult)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1]" started-at="2025-10-29T17:54:39 IST" name="failedscreenshot" finished-at="2025-10-29T17:54:39 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -142,18 +115,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- failedscreenshot -->
-        <test-method is-config="true" signature="failedscreenshot(org.testng.ITestResult)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1]" started-at="2025-10-29T16:31:08 IST" name="failedscreenshot" finished-at="2025-10-29T16:31:08 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=logintest status=SUCCESS method=LoginSauseUI.logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- failedscreenshot -->
-        <test-method signature="logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1]" started-at="2025-10-29T16:31:08 IST" name="logintest" data-provider="logindata" finished-at="2025-10-29T16:31:08 IST" duration-ms="350" status="PASS">
+        <test-method signature="logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1]" started-at="2025-10-29T17:54:43 IST" name="logintest" data-provider="logindata" finished-at="2025-10-29T17:54:47 IST" duration-ms="4190" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -169,7 +131,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logintest -->
-        <test-method is-config="true" signature="failedscreenshot(org.testng.ITestResult)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1]" started-at="2025-10-29T16:31:08 IST" name="failedscreenshot" finished-at="2025-10-29T16:31:08 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="failedscreenshot(org.testng.ITestResult)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1]" started-at="2025-10-29T17:54:43 IST" name="failedscreenshot" finished-at="2025-10-29T17:54:43 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -180,7 +142,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- failedscreenshot -->
-        <test-method signature="logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1]" started-at="2025-10-29T16:31:08 IST" name="logintest" data-provider="logindata" finished-at="2025-10-29T16:31:09 IST" duration-ms="347" status="PASS">
+        <test-method signature="logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1]" started-at="2025-10-29T17:54:47 IST" name="logintest" data-provider="logindata" finished-at="2025-10-29T17:54:51 IST" duration-ms="4177" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -196,7 +158,29 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logintest -->
-        <test-method signature="logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1]" started-at="2025-10-29T16:31:09 IST" name="logintest" data-provider="logindata" finished-at="2025-10-29T16:31:09 IST" duration-ms="339" status="PASS">
+        <test-method is-config="true" signature="failedscreenshot(org.testng.ITestResult)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1]" started-at="2025-10-29T17:54:47 IST" name="failedscreenshot" finished-at="2025-10-29T17:54:47 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=logintest status=SUCCESS method=LoginSauseUI.logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- failedscreenshot -->
+        <test-method is-config="true" signature="failedscreenshot(org.testng.ITestResult)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1]" started-at="2025-10-29T17:54:51 IST" name="failedscreenshot" finished-at="2025-10-29T17:54:51 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=logintest status=SUCCESS method=LoginSauseUI.logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- failedscreenshot -->
+        <test-method signature="logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1]" started-at="2025-10-29T17:54:51 IST" name="logintest" data-provider="logindata" finished-at="2025-10-29T17:54:56 IST" duration-ms="4179" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -212,7 +196,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logintest -->
-        <test-method is-config="true" signature="failedscreenshot(org.testng.ITestResult)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1]" started-at="2025-10-29T16:31:09 IST" name="failedscreenshot" finished-at="2025-10-29T16:31:09 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="failedscreenshot(org.testng.ITestResult)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1]" started-at="2025-10-29T17:54:56 IST" name="failedscreenshot" finished-at="2025-10-29T17:54:56 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -223,7 +207,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- failedscreenshot -->
-        <test-method signature="logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1]" started-at="2025-10-29T16:31:09 IST" name="logintest" data-provider="logindata" finished-at="2025-10-29T16:31:09 IST" duration-ms="336" status="PASS">
+        <test-method signature="logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1]" started-at="2025-10-29T17:54:56 IST" name="logintest" data-provider="logindata" finished-at="2025-10-29T17:55:00 IST" duration-ms="4182" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -239,29 +223,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logintest -->
-        <test-method is-config="true" signature="failedscreenshot(org.testng.ITestResult)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1]" started-at="2025-10-29T16:31:09 IST" name="failedscreenshot" finished-at="2025-10-29T16:31:09 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=logintest status=SUCCESS method=LoginSauseUI.logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- failedscreenshot -->
-        <test-method is-config="true" signature="failedscreenshot(org.testng.ITestResult)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1]" started-at="2025-10-29T16:31:09 IST" name="failedscreenshot" finished-at="2025-10-29T16:31:09 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=logintest status=SUCCESS method=LoginSauseUI.logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- failedscreenshot -->
-        <test-method signature="logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1]" started-at="2025-10-29T16:31:09 IST" name="logintest" data-provider="logindata" finished-at="2025-10-29T16:31:10 IST" duration-ms="337" status="PASS">
+        <test-method signature="logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1]" started-at="2025-10-29T17:55:00 IST" name="logintest" data-provider="logindata" finished-at="2025-10-29T17:55:04 IST" duration-ms="4177" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -277,7 +239,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logintest -->
-        <test-method is-config="true" signature="failedscreenshot(org.testng.ITestResult)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1]" started-at="2025-10-29T16:31:10 IST" name="failedscreenshot" finished-at="2025-10-29T16:31:10 IST" duration-ms="1" status="PASS">
+        <test-method is-config="true" signature="failedscreenshot(org.testng.ITestResult)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1]" started-at="2025-10-29T17:55:00 IST" name="failedscreenshot" finished-at="2025-10-29T17:55:00 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -288,7 +250,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- failedscreenshot -->
-        <test-method signature="logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1]" started-at="2025-10-29T16:31:10 IST" name="logintest" data-provider="logindata" finished-at="2025-10-29T16:31:10 IST" duration-ms="344" status="PASS">
+        <test-method signature="logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1]" started-at="2025-10-29T17:55:04 IST" name="logintest" data-provider="logindata" finished-at="2025-10-29T17:55:08 IST" duration-ms="4173" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -304,7 +266,18 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logintest -->
-        <test-method signature="logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1]" started-at="2025-10-29T16:31:10 IST" name="logintest" data-provider="logindata" finished-at="2025-10-29T16:31:10 IST" duration-ms="349" status="PASS">
+        <test-method is-config="true" signature="failedscreenshot(org.testng.ITestResult)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1]" started-at="2025-10-29T17:55:04 IST" name="failedscreenshot" finished-at="2025-10-29T17:55:04 IST" duration-ms="0" status="PASS">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[[TestResult name=logintest status=SUCCESS method=LoginSauseUI.logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1] output={null}]]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- failedscreenshot -->
+        <test-method signature="logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1]" started-at="2025-10-29T17:55:08 IST" name="logintest" data-provider="logindata" finished-at="2025-10-29T17:55:12 IST" duration-ms="4212" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -320,7 +293,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- logintest -->
-        <test-method is-config="true" signature="failedscreenshot(org.testng.ITestResult)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1]" started-at="2025-10-29T16:31:10 IST" name="failedscreenshot" finished-at="2025-10-29T16:31:10 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="failedscreenshot(org.testng.ITestResult)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1]" started-at="2025-10-29T17:55:08 IST" name="failedscreenshot" finished-at="2025-10-29T17:55:08 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -331,7 +304,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- failedscreenshot -->
-        <test-method is-config="true" signature="failedscreenshot(org.testng.ITestResult)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1]" started-at="2025-10-29T16:31:10 IST" name="failedscreenshot" finished-at="2025-10-29T16:31:10 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="failedscreenshot(org.testng.ITestResult)[pri:0, instance:testClasses.LoginSauseUI@8dbdac1]" started-at="2025-10-29T17:55:12 IST" name="failedscreenshot" finished-at="2025-10-29T17:55:12 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -342,13 +315,17 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- failedscreenshot -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testClasses.LoginSauseUI@8dbdac1]" started-at="2025-10-29T17:55:38 IST" name="tearDown" finished-at="2025-10-29T17:55:39 IST" duration-ms="167" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- testClasses.LoginSauseUI -->
       <class name="testClasses.HomePageTestUI">
-        <test-method signature="HomeScreen()[pri:0, instance:testClasses.HomePageTestUI@3bb9a3ff]" started-at="2025-10-29T16:31:10 IST" name="HomeScreen" finished-at="2025-10-29T16:31:10 IST" duration-ms="5" status="PASS">
+        <test-method signature="HomeScreen()[pri:0, instance:testClasses.HomePageTestUI@3bb9a3ff]" started-at="2025-10-29T17:55:12 IST" name="HomeScreen" finished-at="2025-10-29T17:55:38 IST" duration-ms="25987" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- HomeScreen -->
-        <test-method is-config="true" signature="failedscreenshot(org.testng.ITestResult)[pri:0, instance:testClasses.HomePageTestUI@3bb9a3ff]" started-at="2025-10-29T16:31:10 IST" name="failedscreenshot" finished-at="2025-10-29T16:31:10 IST" duration-ms="0" status="PASS">
+        <test-method is-config="true" signature="failedscreenshot(org.testng.ITestResult)[pri:0, instance:testClasses.HomePageTestUI@3bb9a3ff]" started-at="2025-10-29T17:55:38 IST" name="failedscreenshot" finished-at="2025-10-29T17:55:38 IST" duration-ms="0" status="PASS">
           <params>
             <param index="0">
               <value>
@@ -361,365 +338,5 @@
         </test-method> <!-- failedscreenshot -->
       </class> <!-- testClasses.HomePageTestUI -->
     </test> <!-- logintest_chrome -->
-    <test started-at="2025-10-29T16:31:04 IST" name="logintest_firefox" finished-at="2025-10-29T16:31:39 IST" duration-ms="34180">
-      <class name="testClasses.LoginSauseUI">
-        <test-method is-config="true" signature="beforesuite(java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@478190fc]" started-at="2025-10-29T16:31:04 IST" name="beforesuite" finished-at="2025-10-29T16:31:07 IST" duration-ms="2114" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[firefox]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- beforesuite -->
-        <test-method signature="logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@478190fc]" started-at="2025-10-29T16:31:07 IST" name="logintest" data-provider="logindata" finished-at="2025-10-29T16:31:07 IST" duration-ms="677" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[standard_user]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[secret_sauce]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logintest -->
-        <test-method is-config="true" signature="failedscreenshot(org.testng.ITestResult)[pri:0, instance:testClasses.LoginSauseUI@478190fc]" started-at="2025-10-29T16:31:07 IST" name="failedscreenshot" finished-at="2025-10-29T16:31:07 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=logintest status=SUCCESS method=LoginSauseUI.logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@478190fc] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- failedscreenshot -->
-        <test-method signature="logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@478190fc]" started-at="2025-10-29T16:31:07 IST" name="logintest" data-provider="logindata" finished-at="2025-10-29T16:31:08 IST" duration-ms="371" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[standard_use]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[secret_sauce]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logintest -->
-        <test-method signature="logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@478190fc]" started-at="2025-10-29T16:31:08 IST" name="logintest" data-provider="logindata" finished-at="2025-10-29T16:31:08 IST" duration-ms="359" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[standard_user]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[secret_sauc]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logintest -->
-        <test-method is-config="true" signature="failedscreenshot(org.testng.ITestResult)[pri:0, instance:testClasses.LoginSauseUI@478190fc]" started-at="2025-10-29T16:31:08 IST" name="failedscreenshot" finished-at="2025-10-29T16:31:08 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=logintest status=SUCCESS method=LoginSauseUI.logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@478190fc] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- failedscreenshot -->
-        <test-method is-config="true" signature="failedscreenshot(org.testng.ITestResult)[pri:0, instance:testClasses.LoginSauseUI@478190fc]" started-at="2025-10-29T16:31:08 IST" name="failedscreenshot" finished-at="2025-10-29T16:31:08 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=logintest status=SUCCESS method=LoginSauseUI.logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@478190fc] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- failedscreenshot -->
-        <test-method signature="logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@478190fc]" started-at="2025-10-29T16:31:08 IST" name="logintest" data-provider="logindata" finished-at="2025-10-29T16:31:08 IST" duration-ms="348" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[standard_use]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[secret_sauc]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logintest -->
-        <test-method signature="logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@478190fc]" started-at="2025-10-29T16:31:08 IST" name="logintest" data-provider="logindata" finished-at="2025-10-29T16:31:09 IST" duration-ms="346" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[     ]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[secret_sauc]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logintest -->
-        <test-method is-config="true" signature="failedscreenshot(org.testng.ITestResult)[pri:0, instance:testClasses.LoginSauseUI@478190fc]" started-at="2025-10-29T16:31:08 IST" name="failedscreenshot" finished-at="2025-10-29T16:31:08 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=logintest status=SUCCESS method=LoginSauseUI.logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@478190fc] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- failedscreenshot -->
-        <test-method signature="logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@478190fc]" started-at="2025-10-29T16:31:09 IST" name="logintest" data-provider="logindata" finished-at="2025-10-29T16:31:09 IST" duration-ms="339" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[standard_user]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[      ]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logintest -->
-        <test-method is-config="true" signature="failedscreenshot(org.testng.ITestResult)[pri:0, instance:testClasses.LoginSauseUI@478190fc]" started-at="2025-10-29T16:31:09 IST" name="failedscreenshot" finished-at="2025-10-29T16:31:09 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=logintest status=SUCCESS method=LoginSauseUI.logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@478190fc] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- failedscreenshot -->
-        <test-method is-config="true" signature="failedscreenshot(org.testng.ITestResult)[pri:0, instance:testClasses.LoginSauseUI@478190fc]" started-at="2025-10-29T16:31:09 IST" name="failedscreenshot" finished-at="2025-10-29T16:31:09 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=logintest status=SUCCESS method=LoginSauseUI.logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@478190fc] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- failedscreenshot -->
-        <test-method signature="logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@478190fc]" started-at="2025-10-29T16:31:09 IST" name="logintest" data-provider="logindata" finished-at="2025-10-29T16:31:09 IST" duration-ms="335" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[@@@@]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[@@@@]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logintest -->
-        <test-method signature="logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@478190fc]" started-at="2025-10-29T16:31:09 IST" name="logintest" data-provider="logindata" finished-at="2025-10-29T16:31:10 IST" duration-ms="339" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[6655656]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[565665]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logintest -->
-        <test-method is-config="true" signature="failedscreenshot(org.testng.ITestResult)[pri:0, instance:testClasses.LoginSauseUI@478190fc]" started-at="2025-10-29T16:31:09 IST" name="failedscreenshot" finished-at="2025-10-29T16:31:09 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=logintest status=SUCCESS method=LoginSauseUI.logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@478190fc] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- failedscreenshot -->
-        <test-method signature="logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@478190fc]" started-at="2025-10-29T16:31:10 IST" name="logintest" data-provider="logindata" finished-at="2025-10-29T16:31:10 IST" duration-ms="428" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[5546654]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[secret_sauc]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logintest -->
-        <test-method is-config="true" signature="failedscreenshot(org.testng.ITestResult)[pri:0, instance:testClasses.LoginSauseUI@478190fc]" started-at="2025-10-29T16:31:10 IST" name="failedscreenshot" finished-at="2025-10-29T16:31:10 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=logintest status=SUCCESS method=LoginSauseUI.logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@478190fc] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- failedscreenshot -->
-        <test-method is-config="true" signature="failedscreenshot(org.testng.ITestResult)[pri:0, instance:testClasses.LoginSauseUI@478190fc]" started-at="2025-10-29T16:31:10 IST" name="failedscreenshot" finished-at="2025-10-29T16:31:10 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=logintest status=SUCCESS method=LoginSauseUI.logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@478190fc] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- failedscreenshot -->
-        <test-method signature="logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@478190fc]" started-at="2025-10-29T16:31:10 IST" name="logintest" data-provider="logindata" finished-at="2025-10-29T16:31:10 IST" duration-ms="271" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[,,,,]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[      ]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logintest -->
-        <test-method signature="logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@478190fc]" started-at="2025-10-29T16:31:10 IST" name="logintest" data-provider="logindata" finished-at="2025-10-29T16:31:11 IST" duration-ms="198" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[     ]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[,,,,,,]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logintest -->
-        <test-method is-config="true" signature="failedscreenshot(org.testng.ITestResult)[pri:0, instance:testClasses.LoginSauseUI@478190fc]" started-at="2025-10-29T16:31:10 IST" name="failedscreenshot" finished-at="2025-10-29T16:31:10 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=logintest status=SUCCESS method=LoginSauseUI.logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@478190fc] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- failedscreenshot -->
-        <test-method signature="logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@478190fc]" started-at="2025-10-29T16:31:11 IST" name="logintest" data-provider="logindata" finished-at="2025-10-29T16:31:11 IST" duration-ms="239" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[standard_user]]>
-              </value>
-            </param>
-            <param index="1">
-              <value>
-                <![CDATA[secret_sauce]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- logintest -->
-        <test-method is-config="true" signature="failedscreenshot(org.testng.ITestResult)[pri:0, instance:testClasses.LoginSauseUI@478190fc]" started-at="2025-10-29T16:31:11 IST" name="failedscreenshot" finished-at="2025-10-29T16:31:11 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=logintest status=SUCCESS method=LoginSauseUI.logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@478190fc] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- failedscreenshot -->
-        <test-method is-config="true" signature="failedscreenshot(org.testng.ITestResult)[pri:0, instance:testClasses.LoginSauseUI@478190fc]" started-at="2025-10-29T16:31:11 IST" name="failedscreenshot" finished-at="2025-10-29T16:31:11 IST" duration-ms="0" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=logintest status=SUCCESS method=LoginSauseUI.logintest(java.lang.String,java.lang.String)[pri:0, instance:testClasses.LoginSauseUI@478190fc] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- failedscreenshot -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testClasses.LoginSauseUI@478190fc]" started-at="2025-10-29T16:31:39 IST" name="tearDown" finished-at="2025-10-29T16:31:39 IST" duration-ms="170" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- testClasses.LoginSauseUI -->
-      <class name="testClasses.HomePageTestUI">
-        <test-method signature="HomeScreen()[pri:0, instance:testClasses.HomePageTestUI@79e2c065]" started-at="2025-10-29T16:31:11 IST" name="HomeScreen" finished-at="2025-10-29T16:31:39 IST" duration-ms="27766" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- HomeScreen -->
-        <test-method is-config="true" signature="failedscreenshot(org.testng.ITestResult)[pri:0, instance:testClasses.HomePageTestUI@79e2c065]" started-at="2025-10-29T16:31:39 IST" name="failedscreenshot" finished-at="2025-10-29T16:31:39 IST" duration-ms="1" status="PASS">
-          <params>
-            <param index="0">
-              <value>
-                <![CDATA[[TestResult name=HomeScreen status=SUCCESS method=HomePageTestUI.HomeScreen()[pri:0, instance:testClasses.HomePageTestUI@79e2c065] output={null}]]]>
-              </value>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- failedscreenshot -->
-      </class> <!-- testClasses.HomePageTestUI -->
-    </test> <!-- logintest_firefox -->
   </suite> <!-- automation suite -->
 </testng-results>
