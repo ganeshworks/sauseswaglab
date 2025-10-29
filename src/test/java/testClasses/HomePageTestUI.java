@@ -1,5 +1,6 @@
 package testClasses;
 
+import java.time.Duration;
 import java.util.List;
 
 import org.testng.Assert;
@@ -22,27 +23,24 @@ public class HomePageTestUI extends BaseClass {
 		LoginSauseUI lu = new LoginSauseUI();
 		test = extent.createTest("Home Page validations  ");
 
-		List<String> allitems = h.backpack();
-		test.log(Status.INFO, "Data is: " + allitems.toString());
-		if (h.getdata()) {
-			test.log(Status.PASS, "Sause Backpack Was Available On Home Screen");
-		} else {
-			test.log(Status.FAIL, "Searched text Ws Not Available on Homepage");
-		}
-		// Click On Selected Linked Text
-
 		List<String> productNames = h.getProdNames();
 		// get all product names dynamically
 		for (String prod : productNames) {
+			if (h.getdata(prod)) {
+				test.log(Status.PASS, prod+" Was Available On Home Screen");
+			} else {
+				test.log(Status.FAIL, prod+" Was Not Available on Homepage");
+			}
 			h.clickProduct1(prod);
+			driver.navigate().refresh();
 			test.log(Status.PASS, "Clicked On : " + prod);
-			Thread.sleep(4000);
+			test.log(Status.INFO, "Clicked On Add to cart Button for "+prod);
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 			driver.navigate().back();
 			test.log(Status.PASS, "Navigated back To Screen");
-			Thread.sleep(2000);
-			
-
+			driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(2));
 		}
+		
 	}
 }
 

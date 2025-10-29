@@ -1,14 +1,24 @@
 package testUtility;
 
 import java.io.File;
+import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import org.apache.commons.io.FileUtils;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.firefox.FirefoxOptions;
+import org.testng.ITestResult;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Parameters;
 
 import com.aventstack.extentreports.ExtentReporter;
@@ -16,6 +26,7 @@ import com.aventstack.extentreports.ExtentReports;
 import com.aventstack.extentreports.ExtentTest;
 import com.aventstack.extentreports.reporter.ExtentHtmlReporter;
 import com.aventstack.extentreports.reporter.ExtentSparkReporter;
+import com.aventstack.extentreports.utils.FileUtil;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
@@ -25,7 +36,7 @@ public class BaseClass {
 	protected static ExtentTest test;
 	protected static ExtentReports extent;
 	public ExtentHtmlReporter htmlReporter;
-    public ExtentTest logger;
+	public ExtentTest logger;
 	/*
 	 * @BeforeSuite(alwaysRun = true) public void beforesuite() {
 	 * 
@@ -39,64 +50,72 @@ public class BaseClass {
 	 * 
 	 * driver.manage().window().maximize();
 	 */
-	@Parameters("env") 
-	@BeforeSuite(alwaysRun = true)
-	public void beforesuite() {
-		WebDriverManager.chromedriver().setup();
 
-		ChromeOptions options = new ChromeOptions();
-		options.addArguments("--incognito");
-		options.addArguments("--no-sandbox");
-		options.addArguments("--disable-dev-shm-usage");
-		options.addArguments("--disable-gpu");
-		options.addArguments("--headless=new"); // run headless on Jenkins Linux
-		options.addArguments("--remote-allow-origins=*");
+	@BeforeTest(alwaysRun = true)
+	@Parameters("browser")
+	public void beforesuite(String browser) {
+		if (browser.equalsIgnoreCase("chrome")) {
+			WebDriverManager.chromedriver().setup();
+			ChromeOptions options = new ChromeOptions();
+			options.addArguments("--incognito");
+			options.addArguments("--no-sandbox");
+			options.addArguments("--disable-dev-shm-usage");
+			options.addArguments("--disable-gpu");
+			options.addArguments("--headless=new"); // run headless on Jenkins Linux
+			options.addArguments("--remote-allow-origins=*");
 
-		// 👇 unique directory for each run
-		options.addArguments("--user-data-dir=/tmp/chrome-user-data-" + System.currentTimeMillis());
+			// 👇 unique directory for each run
+			options.addArguments("--user-data-dir=/tmp/chrome-user-data-" + System.currentTimeMillis());
 
-		driver = new ChromeDriver(options);
+			driver = new ChromeDriver(options);
+			
+		}
+		else if(browser.equalsIgnoreCase("firefox")) {
+			WebDriverManager.firefoxdriver().setup();
+			FirefoxOptions options=new FirefoxOptions();
+			options.addArguments("-private");
+			options.addArguments("--headless=new");
+			driver=new FirefoxDriver(options);
+		}
 		driver.manage().window().maximize();
-		
-		//intialize extentreports
-		/*
-		 * String timestamp=new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new
-		 * Date()); String report=System.getProperty("user.dir")+"/reports"; //String
-		 * report=System.getProperty("user.dir")+"/reports/automation_report_"+timestamp
-		 * +".html"; File reportfile=new File(report,"automation_report_" + timestamp +
-		 * ".html"); ExtentSparkReporter reporter=new
-		 * ExtentSparkReporter(reportfile.getAbsolutePath());
-		 * reporter.config().setReportName("Sauce Demo UI Automation Results");
-		 * reporter.config().setDocumentTitle("Automation Execution Report");
-		 */
-		
+
 		String timestamp = new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
-        String reportName = "Automation_Report-" + timestamp + ".html";
+		String reportName = "Automation_Report-" + timestamp + ".html";
 
-        // Create reports folder if not exists
-        String reportPath = System.getProperty("user.dir") + "/reports/" + reportName;
-        new File(System.getProperty("user.dir") + "/reports/Screenshots/").mkdirs();
+		// Create reports folder if not exists
+		String reportPath = System.getProperty("user.dir") + "/reports/" + reportName;
+		new File(System.getProperty("user.dir") + "/reports/Screenshots/").mkdirs();
 
-        htmlReporter = new ExtentHtmlReporter(reportPath);
-        htmlReporter.loadXMLConfig(System.getProperty("user.dir") + "/src/main/java/extent-configuu.xml");
+		htmlReporter = new ExtentHtmlReporter(reportPath);
+		htmlReporter.loadXMLConfig(System.getProperty("user.dir") + "/src/main/java/extent-configuu.xml");
 
-        extent = new ExtentReports();
-        extent.attachReporter(htmlReporter);
-		
-		 extent=new ExtentReports();
+		extent = new ExtentReports();
+		extent.attachReporter(htmlReporter);
+
+		extent = new ExtentReports();
 		extent.attachReporter(htmlReporter);
 		extent.setSystemInfo("Environment", "QA");
 		extent.setSystemInfo("Tester", "ganesh");
 		extent.setSystemInfo("browser", "chrome headless");
 	}
+
+	@AfterMethod
+	public void failedscreenshot(ITestResult result) throws Exception {
+		if (ITestResult.FAILURE == result.getStatus()) {
+			TakesScreenshot ts = (TakesScreenshot) driver;
+			File src = ts.getScreenshotAs(OutputType.FILE);
+			FileUtils.copyFile(src, new File("./screenshots/" + result.getName() + ".png"));
+		}
+	}
+
 	@AfterSuite
 	public void tearDown() {
 		/*
 		 * if (driver != null) { driver.quit(); }
 		 */
-	    extent.flush();
+		extent.flush();
 	}
-	
+
 	/*
 	 * @BeforeSuite(alwaysRun = true) public void beforesuite() {
 	 * WebDriverManager.chromedriver().setup();
@@ -128,7 +147,5 @@ public class BaseClass {
 	 * @AfterSuite(alwaysRun = true) public void tearDown() { if (driver != null) {
 	 * driver.quit(); } extent.flush(); }
 	 */
-
-
 
 }

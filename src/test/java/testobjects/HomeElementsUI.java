@@ -23,6 +23,21 @@ public class HomeElementsUI {
 	By items = By.xpath("//div[@class='inventory_list']");
 	By getelemet = By.className("inventory_item_name");
 	By listprodnames = By.xpath("//div[@class='inventory_item_name ']");
+	By cartbtn = By.id("add-to-cart");
+	By prodcontainer = By.xpath("//div[@class='inventory_item_description']");
+	By cartlist = By.xpath("//div[@class='cart_list']");
+	By cartbutton = By.xpath("//a[@class='shopping_cart_link']");
+	By backkbtn=By.id("back-to-products");
+	
+	public WebElement clickonbaack() {
+		return driver.findElement(backkbtn);
+	}
+
+	public boolean carttest() {
+		boolean test = driver.findElement(cartbutton).isDisplayed();
+		return test;
+
+	}
 
 	public List<String> backpack() throws Exception {
 
@@ -34,36 +49,46 @@ public class HomeElementsUI {
 		return text;
 	}
 
-	public boolean getdata() throws Exception {
-		boolean test = backpack().stream().anyMatch(item -> item.toLowerCase().contains("sauce labs backpack"));
+	public boolean getdata(String name) throws Exception {
+		boolean test = backpack().stream().anyMatch(item -> item.contains(name));
 		return test;
 	}
 
-	public String getbackpack() {
-		String back = driver.findElement(backpack).getText();
-		System.out.println();
-		return back;
+	public void clickoncart() {
+		List<WebElement> cartbtns = driver.findElements(cartbtn);
+
 	}
 
-	public String getlistofitems() {
-		return driver.findElement(items).getText();
-	}
-
-	public void clickProduct1(String names) {
+	public void clickProduct1(String names) throws Exception {
 		List<WebElement> productNames = driver.findElements(listprodnames);
-
 		// Step 2: Loop through and find "Sauce Labs Backpack"
+
 		for (WebElement product : productNames) {
 			String name = product.getText().trim();
-			
 			if (name.contains(names)) {
 				// Step 3: Click the product using its WebElement
 				product.click(); // Direct click on the link text WebElement
+				WebElement cartbtn1 = driver.findElement(cartbtn);
+				String btntext = cartbtn1.getText();
+				if (btntext.equalsIgnoreCase("Add to cart")) {
+					Thread.sleep(2000);
+					cartbtn1.click();
+					Thread.sleep(2000);
+					clickonbaack().click();
+					if (carttest()) {
+						driver.findElement(cartbutton).click();
+						System.out.println("testcart icon");
+						List<WebElement> crtlist = driver.findElements(cartlist);
+						if (crtlist.contains(names)) {
+							System.out.println("test back navigation");
+							driver.navigate().back();
+						}
+
+					}
+				}
 				break; // stop after clicking
-				
 			}
 		}
-
 	}
 
 	public List<String> getProdNames() {
