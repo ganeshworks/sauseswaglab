@@ -20,7 +20,7 @@ public class HomePageTestUI extends BaseClass {
 		ReadConfig read = new ReadConfig();
 		HomeElementsUI h = new HomeElementsUI(driver);
 		LoginElementUI l = new LoginElementUI(driver);
-		LoginSauseUI lv = new LoginSauseUI();
+		LoginSauseUI lu = new LoginSauseUI();
 		test = extent.createTest("Home Page validations  ");
 
 		List<String> productNames = h.getProdNames();
