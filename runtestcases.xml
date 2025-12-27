@@ -7,6 +7,7 @@
         <classes>
             <class name="testClasses.LoginSauseUI"></class>
             <class name="testClasses.HomePageTestUI"></class>
+            <class name="testclasses.LoginTestUI"></class>
         </classes>
     </test>
 
