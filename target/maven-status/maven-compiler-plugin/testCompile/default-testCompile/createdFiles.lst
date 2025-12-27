@@ -3,6 +3,7 @@ testClasses/HomePageTestUI.class
 test_pages/ReadConfig.class
 testClasses/LoginSauseUI.class
 testClasses/LoginTestUI.class
+test.class
 testobjects/HomeElementsUI.class
 testobjects/LoginElementUI.class
 testUtility/ReadExcelData.class

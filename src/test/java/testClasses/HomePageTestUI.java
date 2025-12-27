@@ -25,12 +25,14 @@ public class HomePageTestUI extends BaseClass {
 
 		List<String> productNames = h.getProdNames();
 		// get all product names dynamically
+		h.carttest();
 		for (String prod : productNames) {
 			if (h.getdata(prod)) {
 				test.log(Status.PASS, prod+" Was Available On Home Screen");
 			} else {
 				test.log(Status.FAIL, prod+" Was Not Available on Homepage");
 			}
+			
 			h.clickProduct1(prod);
 			driver.navigate().refresh();
 			test.log(Status.PASS, "Clicked On : " + prod);
