@@ -3,7 +3,6 @@ package testClasses;
 import java.time.Duration;
 import java.util.List;
 
-import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.aventstack.extentreports.Status;
