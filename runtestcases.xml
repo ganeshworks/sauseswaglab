@@ -6,8 +6,8 @@
         <parameter name="browser" value="chrome" />
         <classes>
             <class name="testClasses.LoginSauseUI"></class>
-            <class name="testClasses.HomePageTestUI"></class>
-            <class name="testclasses.LoginTestUI"></class>
+            <!--<class name="testClasses.HomePageTestUI"></class>-->
+            <class name="testClasses.LogoutUItest"></class>
         </classes>
     </test>
 
